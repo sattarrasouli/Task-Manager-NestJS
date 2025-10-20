@@ -1,98 +1,61 @@
+# 🎯 Scalable Task Manager (NestJS, PostgreSQL, Kafka, Redis)
+
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
+  <a href="http://nestjs.com/" target="_blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+[![NestJS Badge](https://img.shields.io/badge/Framework-NestJS-E0234E?style=for-the-badge&logo=nestjs)](https://nestjs.com/)
+[![Database](https://img.shields.io/badge/Database-PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![Message Broker](https://img.shields.io/badge/Broker-Apache%20Kafka-231f20?style=for-the-badge&logo=apache-kafka)](https://kafka.apache.org/)
+[![Caching/Queue](https://img.shields.io/badge/Cache%20&%20Queue-Redis-DC382D?style=for-the-badge&logo=redis)](https://redis.io/)
+[![Language](https://img.shields.io/badge/Language-TypeScript-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![License](https://img.shields.io/github/license/sattarrasouli/task-manager)](./LICENSE)
+[![CircleCI](https://img.shields.io/circleci/build/github/nestjs/nest/master)](https://circleci.com/gh/nestjs/nest)
+[![NPM Version](https://img.shields.io/npm/v/@nestjs/core.svg)](https://www.npmjs.com/~nestjscore)
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
+<p align="center">
+  A highly efficient and scalable backend for a task management application, leveraging microservices architecture with NestJS, PostgreSQL for data persistence, Kafka for asynchronous messaging, and Redis for caching and session management.
 </p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+---
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## 🚀 Features
 
-## Project setup
+This application demonstrates a robust, enterprise-grade backend for managing user tasks, with a focus on **scalability** and **resilience**.
 
-```bash
-$ pnpm install
-```
+* **Core CRUD API:** Full support for creating, reading, updating, and deleting tasks.
+* **Persistent Storage:** Uses **PostgreSQL** for reliable data storage.
+* **Asynchronous Processing:** Implements **Kafka** for handling asynchronous events (e.g., task status updates, notifications) via microservices.
+* **High Performance:** Utilizes **Redis** for fast caching of frequently accessed data and for managing user sessions/rate limits.
+* **NestJS Architecture:** Clean, modular, and testable code adhering to NestJS best practices.
 
-## Compile and run the project
+---
 
-```bash
-# development
-$ pnpm run start
+## 🛠️ Tech Stack & Architecture
 
-# watch mode
-$ pnpm run start:dev
+The project is structured around the following key technologies:
 
-# production mode
-$ pnpm run start:prod
-```
+| Component | Technology | Role |
+| :--- | :--- | :--- |
+| **Framework** | **NestJS (TypeScript)** | Primary application and microservice framework. |
+| **Database** | **PostgreSQL** | Primary relational data persistence (using TypeORM/Prisma). |
+| **Messaging** | **Apache Kafka** | Asynchronous communication between services (e.g., event-driven processing). |
+| **Caching** | **Redis** | In-memory data store for caching and session management. |
 
-## Run tests
+---
 
-```bash
-# unit tests
-$ pnpm run test
+## ⚙️ Project Setup (Local Development)
 
-# e2e tests
-$ pnpm run test:e2e
+This project requires **Node.js**, **pnpm**, and **Docker** to run the services (Postgres, Kafka, Redis).
 
-# test coverage
-$ pnpm run test:cov
-```
+### 1. Prerequisites
 
-## Deployment
+* Node.js (LTS version)
+* pnpm
+* Docker & Docker Compose
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+### 2. Clone the Repository
 
 ```bash
-$ pnpm install -g @nestjs/mau
-$ mau deploy
-```
-
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+git clone [https://github.com/sattarrasouli/task-manager.git](https://github.com/sattarrasouli/task-manager.git)
+cd task-manager
